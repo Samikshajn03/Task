@@ -20,12 +20,12 @@ const AdForm = ({token}) => {
   setSuccess(false);
 
   if (campaign.length < 3) {
-    setError("Campaign name must be at least 3 characters.");
+    toast.error("Campaign name must be at least 3 characters.");
     return;
   }
 
   if (adText.length === 0 || adText.length > 100) {
-    setError("Ad Text length must be between 1 to 100 characters.");
+    toast.error("Ad Text length must be between 1 to 100 characters.");
     return;
   }
 
